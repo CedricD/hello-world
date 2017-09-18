@@ -5,19 +5,19 @@ let jshint = require('gulp-jshint');
 
 gulp.task('default', ['jshint', 'test', 'serve']);
 
-gulp.task('jshint', () = > {
+gulp.task('jshint', () => {
     return gulp.src('./*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 })
 .
-task('test', () = > {
+task('test', () => {
     require('./test.js'
 )
 ;
 })
 .
-task('serve', () = > {
+task('serve', () => {
     require('./main.js'
 )
 ;
