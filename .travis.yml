@@ -1,0 +1,22 @@
+before_script:
+  - npm install; npm install -g gulp
+script: gulp test
+language: node_js
+env:
+  - PORT=7777
+node_js:
+  - "6.11"
+  - "5.1"
+  - "4"
+#  - "0.12"
+deploy:
+  provider: bluemixcloudfoundry
+  skip_cleanup: true
+  manifest: manifest.yml
+  username: $BLUEMIX_USER
+  password: $BLUEMIX_PASSWORD
+  organization: $BLUEMIX_ORGANIZATION
+  space: $BLUEMIX_SPACE
+  on:
+    branch: master
+group: deprecated-2017Q3
