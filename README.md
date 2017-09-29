@@ -1,3 +1,5 @@
+LOCAL
+
 # hello-world
 Hello world repository
 
